@@ -21,4 +21,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "CourseSearchAssistant"
 include(":app")
- 
+include(":data")
+include(":domain")
+include(":auth")
+include(":home")
+include(":details")
+include(":favorites")
+include(":account")
