@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    tools:context=".ui.HomeFragment">
+
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_56dp"
+        android:layout_marginEnd="@dimen/size_8dp"
+        android:background="@drawable/background_edittext"
+        android:drawableStart="@drawable/search"
+        android:drawablePadding="@dimen/margin_16dp"
+        android:hint="@string/search_courses_txt"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/margin_16dp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toStartOf="@id/filterBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/filterBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/filter_btn"
+        app:layout_constraintBottom_toBottomOf="@id/editTextSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editTextSearch"
+        app:layout_constraintTop_toTopOf="@id/editTextSearch" />
+
+    <TextView
+        android:id="@+id/sortedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:clickable="true"
+        android:drawablePadding="@dimen/size_8dp"
+        android:focusable="true"
+        android:fontFamily="@font/roboto"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/sort_to_date"
+        android:textColor="@color/green"
+        android:textSize="@dimen/size_16sp"
+        app:drawableEndCompat="@drawable/arrow_down_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterBtn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sortedBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
