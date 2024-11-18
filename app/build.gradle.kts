@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.gms.servisec)
+    id("kotlin-kapt")
 }
 
 android {
@@ -45,6 +46,9 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":account"))
     implementation(project(":auth"))
+
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
 
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
