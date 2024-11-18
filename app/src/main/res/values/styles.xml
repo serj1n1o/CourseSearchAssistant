@@ -4,7 +4,6 @@
     <style name="TextBottomNav" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
         <item name="fontWeight">600</item>
-        <item name="fontFamily">@font/roboto</item>
     </style>
 
 </resources>

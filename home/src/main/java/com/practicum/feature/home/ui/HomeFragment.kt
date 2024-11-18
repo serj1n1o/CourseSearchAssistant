@@ -19,10 +19,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.filterBtn.setOnClickListener {
+        }
+
+        binding.sortedBtn.setOnClickListener {
+
+        }
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance() = HomeFragment()
-    }
 }

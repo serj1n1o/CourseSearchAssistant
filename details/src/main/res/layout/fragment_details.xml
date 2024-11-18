@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/gray"
+    tools:context=".DetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/cover"
+            app:layout_constraintDimensionRatio="5:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16dp"
+            android:src="@drawable/button_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnFavorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16dp"
+            android:src="@drawable/button_favorites"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rating"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_8dp"
+            android:layout_marginBottom="@dimen/size_8dp"
+            android:background="@drawable/background_rating"
+            android:drawablePadding="@dimen/size_4dp"
+            android:padding="@dimen/size_4dp"
+            android:textSize="@dimen/txt_12sp"
+            app:drawableStartCompat="@drawable/star_fill"
+            app:layout_constraintBottom_toBottomOf="@id/cover"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="4.9" />
+
+        <TextView
+            android:id="@+id/dateToAddCourse"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_4dp"
+            android:layout_marginBottom="@dimen/size_8dp"
+            android:background="@drawable/background_rating"
+            android:padding="@dimen/size_4dp"
+            android:textSize="@dimen/txt_12sp"
+            app:layout_constraintBottom_toBottomOf="@id/cover"
+            app:layout_constraintStart_toEndOf="@id/rating"
+            tools:text="12 may 2024" />
+
+        <TextView
+            android:id="@+id/nameCourse"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="@dimen/txt_22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cover"
+            tools:text="Android developer" />
+
+
+        <ImageView
+            android:id="@+id/coverAuthor"
+            android:layout_width="@dimen/size_44dp"
+            android:layout_height="@dimen/size_44dp"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameCourse"
+            tools:background="@color/glass" />
+
+        <TextView
+            android:id="@+id/authorTxt"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:text="@string/author_txt"
+            android:textColor="@color/whiteGray"
+            android:textSize="@dimen/txt_12sp"
+            app:layout_constraintBottom_toTopOf="@id/authorName"
+            app:layout_constraintStart_toEndOf="@id/coverAuthor"
+            app:layout_constraintTop_toTopOf="@id/coverAuthor" />
+
+        <TextView
+            android:id="@+id/authorName"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_4dp"
+            android:text="@string/author_txt"
+            android:textSize="@dimen/txt_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/coverAuthor"
+            app:layout_constraintStart_toEndOf="@id/coverAuthor"
+            app:layout_constraintTop_toBottomOf="@id/authorTxt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartCourse"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/size_32dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/txt_start_course"
+            android:textAllCaps="false"
+            app:cornerRadius="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coverAuthor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoToPlatform"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:backgroundTint="@color/dark_gray"
+            android:text="@string/go_platform"
+            android:textAllCaps="false"
+            app:cornerRadius="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnStartCourse" />
+
+        <TextView
+            android:id="@+id/txtAboutCourse"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/size_28dp"
+            android:text="@string/about_course"
+            android:textSize="@dimen/txt_22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnGoToPlatform" />
+
+        <TextView
+            android:id="@+id/aboutCourse"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/txt_14sp"
+            tools:text="@string/long_text"
+            android:textColor="@color/whiteGray"
+            android:textSize="@dimen/txt_16sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAboutCourse" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

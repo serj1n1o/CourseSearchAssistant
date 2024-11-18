@@ -38,7 +38,13 @@ android {
 
 dependencies {
     implementation(project(":home"))
+    implementation(project(":account"))
+    implementation(project(":favorites"))
     implementation(project(":core"))
+    implementation(project(":details"))
+    implementation(project(":data"))
+    implementation(project(":account"))
+    implementation(project(":auth"))
 
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)

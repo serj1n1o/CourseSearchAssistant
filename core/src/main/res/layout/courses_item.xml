@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:background="@drawable/background_item_courses">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cover"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_112dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/cornerCover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/cover" />
+
+
+    <ImageView
+        android:id="@+id/btnFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16dp"
+        android:src="@drawable/favorites_inactive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rating"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_8dp"
+        android:layout_marginBottom="@dimen/size_8dp"
+        android:background="@drawable/background_rating"
+        android:drawablePadding="@dimen/size_4dp"
+        android:padding="@dimen/size_4dp"
+        android:textSize="@dimen/txt_12sp"
+        app:drawableStartCompat="@drawable/star_fill"
+        app:layout_constraintBottom_toBottomOf="@id/cover"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="4.9" />
+
+    <TextView
+        android:id="@+id/dateToAddCourse"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_4dp"
+        android:layout_marginBottom="@dimen/size_8dp"
+        android:background="@drawable/background_rating"
+        android:padding="@dimen/size_4dp"
+        android:textSize="@dimen/txt_12sp"
+        app:layout_constraintBottom_toBottomOf="@id/cover"
+        app:layout_constraintStart_toEndOf="@id/rating"
+        tools:text="12 may 2024" />
+
+    <TextView
+        android:id="@+id/nameCourse"
+        style="@style/Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="@dimen/txt_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cover"
+        tools:text="Android developer" />
+
+    <TextView
+        android:id="@+id/aboutCourse"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/whiteGray"
+        android:textSize="@dimen/txt_12sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameCourse"
+        tools:text="@string/long_text" />
+
+    <TextView
+        android:id="@+id/price"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:textSize="@dimen/txt_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="9999 Rub" />
+
+    <TextView
+        android:id="@+id/moreDetails"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:text="@string/txt_more_details"
+        android:textColor="@color/green"
+        android:textSize="@dimen/txt_12sp"
+        app:drawableEndCompat="@drawable/arrow_right_short_fill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
